@@ -33,6 +33,7 @@
                     <Setter Property="Aspect" Value="UniformToFill" />
                     <Setter Property="Stroke" Value="{StaticResource BaseStrokeColor}" />
                     <Setter Property="Fill" Value="{StaticResource BaseColor}" />
+                    <Setter Property="BackgroundColor" Value="Red" />
                 </Style>
                 <Style x:Key="PrefStyle_Path" TargetType="Path">
                     <Setter Property="VisualStateManager.VisualStateGroups">
@@ -53,6 +54,7 @@
                     <Setter Property="Aspect" Value="Uniform" />
                     <Setter Property="Stroke" Value="{StaticResource BaseStrokeColor}" />
                     <Setter Property="Fill" Value="{StaticResource BaseColor}" />
+                    <Setter Property="BackgroundColor" Value="Red" />
                 </Style>
             </ResourceDictionary>
         </AbsoluteLayout.Resources>
@@ -118,7 +120,9 @@
             Style="{StaticResource PrefStyle_Path}"
             TranslationX="186"
             TranslationY="219.5">
-
+            <Polygon.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Polygon.GestureRecognizers>
         </Polygon>
 
         <Polygon
