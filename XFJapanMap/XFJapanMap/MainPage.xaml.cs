@@ -17,5 +17,16 @@ namespace XFJapanMap
         {
             InitializeComponent();
         }
+
+        private VisualElement polygonSelected;
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            if (polygonSelected != null)
+                VisualStateManager.GoToState(polygonSelected, "Normal");
+
+            VisualStateManager.GoToState((VisualElement)sender, "Selected");
+
+            polygonSelected = (VisualElement)sender;
+        }
     }
 }

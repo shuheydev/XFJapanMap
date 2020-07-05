@@ -10,6 +10,8 @@ namespace XFJapanMap
         {
             InitializeComponent();
 
+            Device.SetFlags(new[] { "Shapes_Experimental" });
+
             MainPage = new MainPage();
         }
 
